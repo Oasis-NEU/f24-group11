@@ -57,7 +57,6 @@ function App() {
       <h1>Free for Me</h1>
 
       {/* Dropdown for selecting a university/college */}
-      <div>
         <label htmlFor="school-select">Select the school you attend: </label>
         <select
           id="location-select"
@@ -70,22 +69,22 @@ function App() {
             </option>
           ))}
         </select>
-      </div>
 
       {/* Button */}
-      <div className="card">
         <button onClick={handleFindDiscounts}>
-          FIND DISCOUNTS
+          →  FIND DISCOUNTS
         </button>
-      </div>
+        
+        <div></div>
 
       {/* Button */}
-      <h4>If you're looking for 100% free things to do:</h4>
-      <div className="card">
-        <button onClick={handleFreeThings}>
-          Free Things in Boston
+      <button 
+      onClick={handleFreeThings} 
+      style={{ border: '1px solid blue' }}>
+        More Free Things for Everyone
         </button>
-      </div>
+
+ 
 
       {/* Map Display */}
       <div style={{ height: '500px', marginTop: '20px' }}>
