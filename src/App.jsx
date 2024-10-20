@@ -15,7 +15,21 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [selectedSchool, setSelectedLocation] = useState('Northeastern University');
+  
+  // Schools for dropdown
+  const schools = {
+    'Northeastern University': [42.3399, -71.0899],
+    'Massachusetts Institute of Technology': [42.3601, -71.0942],
+    'Harvard University': [42.3744, -71.1182],
+    'Boston University': [42.3505, -71.1054],
+    'Boston College': [42.3355, -71.1685]
+  };
+
+  const handleSchoolChange = (event) => {
+    setSelectedLocation(event.target.value);
+  };
 
   return (
     <>
@@ -36,7 +50,8 @@ function App() {
           ))}
         </select>
       </div>
-      <h1>Free for Me</h1>
+
+      {/* Button and count */}
       <div className="card">
         <button onClick={() => setCount(count + 1)}>
           Count is {count}
@@ -63,6 +78,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
