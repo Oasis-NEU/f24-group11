@@ -24,7 +24,7 @@ function App() {
     'Massachusetts Institute of Technology': [42.3601, -71.0942],
     'Harvard University': [42.3744, -71.1182],
     'Boston University': [42.3505, -71.1054],
-    'Boston College': [42.3355, -71.1685]
+    'Tufts University': [42.4085, 71.1183]
   };
 
   const handleSchoolChange = (event) => {
