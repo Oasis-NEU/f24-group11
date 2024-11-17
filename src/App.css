@@ -1,3 +1,5 @@
+/* Existing styles */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -15,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -44,3 +48,35 @@
 .read-the-docs {
   color: #888;
 }
+
+/* New styles for the Harvard Page grid */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+  gap: 16px; /* Spacing between items */
+  margin: 20px; /* Add some margin around the grid */
+}
+
+.grid-item {
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside each icon */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px; /* Fixed height for square shape */
+}
+
+.icon h3 {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+.icon p {
+  font-size: 1em;
+  margin: 4px 0;
+}
+

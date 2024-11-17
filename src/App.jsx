@@ -6,6 +6,11 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+import HarvardDiscounts from './HarvardPage'; // Import the HarvardDiscounts component
+import NortheasternPage from './NortheasternPage'; // Import the NortheasternPage component
+import TuftsPage from './TuftsPage'; // Import the TuftsPage component
+import BUPage from './BUPage'; // Import the BUPage component
+import MITPage from './MITPage'; // Import the MITPage component
 
 // Fix Leaflet's default icon
 let DefaultIcon = L.icon({
@@ -36,63 +41,47 @@ function App() {
   const handleFindDiscounts = () => {
     // Conditional navigation based on the selected school
     if (selectedSchool === 'Harvard University') {
-      navigate('/harvard-discounts'); // Route for Harvard
+      navigate('/harvard-discounts');
     } else if (selectedSchool === 'Northeastern University') {
-      navigate('/northeastern-discounts'); // Route for Northeastern
+      navigate('/northeastern-discounts');
     } else if (selectedSchool === 'Massachusetts Institute of Technology') {
-      navigate('/mit-discounts'); // Route for MIT
+      navigate('/mit-discounts');
     } else if (selectedSchool === 'Boston University') {
-      navigate('/bu-discounts'); // Route for BU
+      navigate('/bu-discounts');
     } else if (selectedSchool === 'Tufts University') {
-      navigate('/tufts-discounts'); // Route for Tufts
+      navigate('/tufts-discounts');
     }
   };
 
   const handleFreeThings = () => {
-        navigate('/free'); // Route for free stuff
+    navigate('/free');
   };
 
   return (
     <>
       <h1>Free for Me</h1>
+      <label htmlFor="school-select">Select the school you attend: </label>
+      <select
+        id="location-select"
+        value={selectedSchool}
+        onChange={handleSchoolChange}
+      >
+        {Object.keys(schools).map((school) => (
+          <option key={school} value={school}>
+            {school}
+          </option>
+        ))}
+      </select>
 
-      {/* Dropdown for selecting a university/college */}
-        <label htmlFor="school-select">Select the school you attend: </label>
-        <select
-          id="location-select"
-          value={selectedSchool}
-          onChange={handleSchoolChange}
-        >
-          {Object.keys(schools).map((school) => (
-            <option key={school} value={school}>
-              {school}
-            </option>
-          ))}
-        </select>
+      <button onClick={handleFindDiscounts}>→ FIND DISCOUNTS</button>
+      <button onClick={handleFreeThings}>More Free Things for Everyone</button>
 
-      {/* Button */}
-        <button onClick={handleFindDiscounts}>
-          →  FIND DISCOUNTS
-        </button>
-        
-        <div></div>
-
-      {/* Button */}
-      <button 
-      onClick={handleFreeThings} 
-      style={{ border: '1px solid blue' }}>
-        More Free Things for Everyone
-        </button>
-
- 
-
-      {/* Map Display */}
       <div style={{ height: '500px', marginTop: '20px' }}>
         <MapContainer
-          center={schools[selectedSchool]} // Center based on selected school
+          center={schools[selectedSchool]}
           zoom={13}
           style={{ height: '100%', width: '100%' }}
-          key={selectedSchool} // Force re-render when the selected school changes
+          key={selectedSchool}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -107,51 +96,28 @@ function App() {
   );
 }
 
-// Harvard Discount Page
-function HarvardDiscounts() {
-  return <h2>Harvard University Discounts</h2>;
+// FreeStuff function
+function FreeStuff() {
+  return <h2>Free Things to do in Boston</h2>;
 }
 
-// Northeastern Discount Page
-function NortheasternDiscounts() {
-  return <h2>Northeastern University Discounts</h2>;
-}
-
-// MIT Discount Page
-function MITDiscounts() {
-  return <h2>Massachusetts Institute of Technology Discounts</h2>;
-}
-
-// Boston University Discount Page
-function BUDiscounts() {
-  return <h2>Boston University Discounts</h2>;
-}
-
-// Tufts Discount Page
-function TuftsDiscounts() {
-  return <h2>Tufts University Discounts</h2>;
-}
-
-// free stuff page
-function freeStuff() {
-  return <h2>Free Things to do in Boston</h2>
-}
-
-// Main routing component
+// Routing component
 function MainApp() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/harvard-discounts" element={<HarvardDiscounts />} />
-        <Route path="/northeastern-discounts" element={<NortheasternDiscounts />} />
-        <Route path="/mit-discounts" element={<MITDiscounts />} />
-        <Route path="/bu-discounts" element={<BUDiscounts />} />
-        <Route path="/tufts-discounts" element={<TuftsDiscounts />} />
-        <Route path="/free" element={<freeStuff />} />
+        <Route path="/northeastern-discounts" element={<NortheasternPage />} />
+        <Route path="/mit-discounts" element={<MITPage />} />
+        <Route path="/bu-discounts" element={<BUPage />} />
+        <Route path="/tufts-discounts" element={<TuftsPage />} />
+        <Route path="/free" element={<FreeStuff />} />
       </Routes>
     </Router>
   );
 }
 
 export default MainApp;
+
+
