@@ -1,7 +1,7 @@
 // HarvardDiscounts.jsx
 import { useEffect, useState } from 'react';
 import { supabase } from './supabaseClient'; // Ensure this path is correct
-
+//change
 
 function HarvardDiscounts() {
  const [discounts, setDiscounts] = useState([]);
