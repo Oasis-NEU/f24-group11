@@ -55,7 +55,12 @@ function App() {
   return (
     <>
       <h1>Free for Me</h1>
-
+      <p style={{marginLeft: 80, marginRight: 80}}><b>
+        Hey BeanTown! Are your pockets hurting? Do you want something for free (because we know tuition ain’t cheap)? Look no further, 
+        Free for Me is here to help! Free for Me helps college & university students find and access free things or events near you. 
+        By entering your specific school and neighborhood in the greater Boston area, Free for Me finds the closest free and discounted 
+        opportunities around you!
+      </b></p>
       {/* Dropdown for selecting a university/college */}
         <label htmlFor="school-select">Select the school you attend: </label>
         <select
@@ -71,8 +76,7 @@ function App() {
         </select>
 
       {/* Button */}
-        <button onClick={handleFindDiscounts}>
-          →  FIND DISCOUNTS
+        <button onClick={handleFindDiscounts} style={{ border: '1px solid black', marginLeft: 15}}>→  FIND DISCOUNTS
         </button>
         
         <div></div>
@@ -80,7 +84,7 @@ function App() {
       {/* Button */}
       <button 
       onClick={handleFreeThings} 
-      style={{ border: '1px solid blue' }}>
+      style={{ border: '1px solid black', marginTop: 10}}>
         More Free Things for Everyone
         </button>
 
