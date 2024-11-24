@@ -13,17 +13,9 @@ const mitDiscountData = [
 
 function MITPage() {
   const navigate = useNavigate();
-
-  const handleGoHome = () => {
-    navigate('/');
-  };
   
   return (
     <div>
-      <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
-        Go Home
-      </button>
-      <div>
     <h1>Massachusetts Institute of Technology Student Discounts</h1>
     <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
     <div className="grid-container">
@@ -37,7 +29,6 @@ function MITPage() {
         </div>
       ))}
       </div>
-    </div>
     </div>
   );
 }

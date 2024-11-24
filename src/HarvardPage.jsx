@@ -17,15 +17,7 @@ const discountData = [
 function HarvardPage() {
   const navigate = useNavigate();
 
-  const handleGoHome = () => {
-    navigate('/');
-  };
-
   return (
-    <div>
-      <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
-        Go Home
-      </button>
       <div>
     <h1>Harvard University Student Discounts</h1>
     <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
@@ -40,7 +32,6 @@ function HarvardPage() {
           </div>
         ))}
        </div>
-    </div>
     </div>
   );
 }

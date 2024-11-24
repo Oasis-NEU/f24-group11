@@ -17,14 +17,7 @@ const discountData = [
 function NortheasternPage() {
   const navigate = useNavigate();
 
-  const handleGoHome = () => {
-    navigate('/');
-  };
   return (
-    <div>
-      <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
-        Go Home
-      </button>
       <div>
       <h1>Northeastern University Student Discounts</h1>
       <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
@@ -39,7 +32,6 @@ function NortheasternPage() {
           </div>
         ))}
       </div>
-    </div>
     </div>
   );
 }
