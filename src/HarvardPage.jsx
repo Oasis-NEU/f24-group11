@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Example data for the grid
 const discountData = [
@@ -14,7 +15,11 @@ const discountData = [
 ];
 
 function HarvardPage() {
+  const navigate = useNavigate();
   return (
+    <div>
+    <h1>Harvard University Student Discounts</h1>
+    <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
     <div className="grid-container">
       {discountData.map((item, index) => (
         <div className="grid-item" key={index}>
@@ -25,6 +30,7 @@ function HarvardPage() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

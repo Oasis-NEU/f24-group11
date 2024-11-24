@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Example data for Tufts discounts
 const tuftsDiscountData = [
@@ -11,7 +12,12 @@ const tuftsDiscountData = [
 ];
 
 function TuftsPage() {
+  const navigate = useNavigate();
+  
   return (
+    <div>
+      <h1>Tufts University Student Discounts</h1>
+      <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
     <div className="grid-container">
       {tuftsDiscountData.map((item, index) => (
         <div className="grid-item" key={index}>
@@ -22,6 +28,7 @@ function TuftsPage() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
