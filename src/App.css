@@ -59,6 +59,7 @@
 }
 
 .grid-item {
+  color: black;
   background-color: #f0f0f0; /* Light gray background */
   border-radius: 8px; /* Rounded corners */
   padding: 20px; /* Space inside each icon */
