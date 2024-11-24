@@ -18,12 +18,16 @@ function TuftsPage() {
     navigate('/');
   };
 
+  
   return (
     <div>
       <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
         Go Home
       </button>
-      <div className="grid-container">
+      <div>
+      <h1>Tufts University Student Discounts</h1>
+      <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
+    <div className="grid-container">
         {tuftsDiscountData.map((item, index) => (
           <div className="grid-item" key={index}>
             <div className="icon">
@@ -34,6 +38,7 @@ function TuftsPage() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

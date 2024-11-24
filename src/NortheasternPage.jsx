@@ -20,13 +20,15 @@ function NortheasternPage() {
   const handleGoHome = () => {
     navigate('/');
   };
-
   return (
     <div>
       <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
         Go Home
       </button>
-      <div className="grid-container">
+      <div>
+      <h1>Northeastern University Student Discounts</h1>
+      <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
+    <div className="grid-container">
         {discountData.map((item, index) => (
           <div className="grid-item" key={index}>
             <div className="icon">
@@ -37,6 +39,7 @@ function NortheasternPage() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

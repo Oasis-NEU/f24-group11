@@ -91,6 +91,8 @@ function App() {
         More Free Things for Everyone
         </button>
       
+
+
       <div style={{ height: '500px', marginTop: '20px' }}>
         <MapContainer
           center={schools[selectedSchool]}
