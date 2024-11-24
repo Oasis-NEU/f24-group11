@@ -17,8 +17,6 @@ function MITPage() {
   const handleGoHome = () => {
     navigate('/');
   };
-
-  const navigate = useNavigate();
   
   return (
     <div>
@@ -39,7 +37,6 @@ function MITPage() {
         </div>
       ))}
       </div>
-    </div>
     </div>
     </div>
   );

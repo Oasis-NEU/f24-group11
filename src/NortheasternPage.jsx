@@ -20,8 +20,6 @@ function NortheasternPage() {
   const handleGoHome = () => {
     navigate('/');
   };
-
-  const navigate = useNavigate();
   return (
     <div>
       <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>

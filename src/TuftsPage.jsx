@@ -18,7 +18,6 @@ function TuftsPage() {
     navigate('/');
   };
 
-  const navigate = useNavigate();
   
   return (
     <div>

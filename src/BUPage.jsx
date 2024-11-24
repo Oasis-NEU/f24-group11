@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 // Example data for BU discounts
 const buDiscountData = [
@@ -18,8 +17,6 @@ function BUPage() {
   const handleGoHome = () => {
     navigate('/');
   };
-
-  const navigate = useNavigate();
   
   return (
     <div>
