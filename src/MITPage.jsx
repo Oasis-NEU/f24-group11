@@ -13,13 +13,23 @@ const mitDiscountData = [
 
 function MITPage() {
   const navigate = useNavigate();
+
+  const handleGoHome = () => {
+    navigate('/');
+  };
+
+  const navigate = useNavigate();
   
   return (
     <div>
+      <button onClick={handleGoHome} style={{ margin: '20px', padding: '10px' }}>
+        Go Home
+      </button>
+      <div>
     <h1>Massachusetts Institute of Technology Student Discounts</h1>
     <button onClick={() => navigate(-1)} style={{border: '1px solid black'}}>Back</button>
     <div className="grid-container">
-      {mitDiscountData.map((item, index) => (
+        {mitDiscountData.map((item, index) => (
         <div className="grid-item" key={index}>
           <div className="icon">
             <h3>{item.name}</h3>
@@ -28,6 +38,8 @@ function MITPage() {
           </div>
         </div>
       ))}
+      </div>
+    </div>
     </div>
     </div>
   );
