@@ -5,62 +5,62 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.font-link {
+  background-color: #AF2728;
+ }
+ 
+ .font-link {
   font-family: 'Rubik Bubbles', cursive;
-}
-
-.logo {
+ }
+ 
+ .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-
-.logo:hover {
+ }
+ 
+ .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
+ }
+ 
+ .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
+ }
+ 
+ @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
+ }
+ 
+ @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
+ }
+ 
+ .card {
   padding: 2em;
-}
-
-.read-the-docs {
+ }
+ 
+ .read-the-docs {
   color: #888;
-}
-
-/* New styles for the Harvard Page grid */
-
-.grid-container {
+ }
+ 
+ /* New styles for the Harvard Page grid */
+ 
+ .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
   gap: 16px; /* Spacing between items */
   margin: 20px; /* Add some margin around the grid */
-}
-
-.grid-item {
-  color: black;
-  background-color: #f0f0f0; /* Light gray background */
+ }
+ 
+ .grid-item {
+  background-color: #880320; /* Light gray background */
   border-radius: 8px; /* Rounded corners */
   padding: 20px; /* Space inside each icon */
   text-align: center; /* Center text */
@@ -69,15 +69,17 @@
   flex-direction: column;
   justify-content: space-between;
   height: 180px; /* Fixed height for square shape */
-}
-
-.icon h3 {
+ }
+ 
+ .icon h3 {
   font-size: 1.2em;
   margin: 0 0 10px 0;
-}
-
-.icon p {
+  color: #DEADB9;
+ }
+ 
+ .icon p {
   font-size: 1em;
   margin: 4px 0;
-}
-
+  color: #DEADB9;
+ }
+ 
